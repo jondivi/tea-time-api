@@ -50,6 +50,6 @@ app.get('/api/:name',(request,response)=>{
 
 
 // This last section will actually set up the server and allow it to listen on a port
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The tea API server is running on port ${PORT}! Better go catch it!`)
 })
